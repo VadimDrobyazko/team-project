@@ -1,0 +1,33 @@
+.slider {
+  width: 100%;
+  font-weight: 500;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 16px;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  &__view {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
