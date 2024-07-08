@@ -1,19 +1,17 @@
 /* eslint-disable max-len */
 /* eslint-disable no-console */
 import React, { useState } from 'react';
-import { Cafe } from '../../types/Cafe';
-import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { useAppSelector } from '../../app/hooks';
 import { RootState } from '../../app/store';
-
-import * as cafesAction from '../../features/cafes/cafes';
-import Card from '../../components/Card/Card';
+import SliderCafe from '../../components/SliderCafe/SliderCafe';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   const [query, setQuery] = useState('');
 
-  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
-  const { cafes, loaded, hasError } = useAppSelector(
+  const { loaded, hasError } = useAppSelector(
     (state: RootState) => state.cafes,
   );
 
@@ -22,7 +20,8 @@ const HomePage: React.FC = () => {
   };
 
   const handleSearch = () => {
-    dispatch(cafesAction.init(query));
+    navigate(`discover/${query}`);
+    localStorage.setItem('lastQuery', query);
   };
 
   return (
@@ -77,21 +76,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="slider">
-        <div className="container slider__container">
-          <div className="slider__top">
-            <h2 className="slider__title">Places are nearby</h2>
-
-            <span className="slider__view">View all</span>
-          </div>
-
-          <ul className="slider__list">
-            {cafes.slice(0, 4).map((cafe: Cafe) => (
-              <Card key={cafe.unique_id} cafe={cafe} />
-            ))}
-          </ul>
-        </div>
-      </section>
+      <SliderCafe />
     </div>
   );
 };

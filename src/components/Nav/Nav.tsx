@@ -12,7 +12,7 @@ const Nav: React.FC = () => {
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__item">
-          <NavLink to="/" className={getLinkClass}>
+          <NavLink to="/discover" className={getLinkClass}>
             Discover
           </NavLink>
         </li>
@@ -24,7 +24,7 @@ const Nav: React.FC = () => {
         </li>
 
         <li className="nav__item">
-          <NavLink to="/aboyt" className={getLinkClass}>
+          <NavLink to="/about" className={getLinkClass}>
             About us
           </NavLink>
         </li>

@@ -1,0 +1,39 @@
+.discover {
+  height: 100%;
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    @include grid;
+  }
+
+  &__title {
+    grid-column: 1 / 4;
+  }
+
+  &__search {
+    grid-column: 1 / 4;
+  }
+
+  &__sort {
+    display: flex;
+    align-items: center;
+
+    grid-column: 9 / 13;
+
+    &-list {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    grid-column: 4 / 13;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 16px;
+  }
+}

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -7,9 +8,12 @@ import {
   register,
   selectAuthLoading,
   selectAuthError,
+  setUser,
+  setToken,
 } from '../../features/auth/auth';
+import axios from 'axios';
 
-const AuthModal: React.FC = () => {
+const ProfilePage: React.FC = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +25,19 @@ const AuthModal: React.FC = () => {
   const error = useSelector((state: RootState) => selectAuthError(state));
 
   const handleBackClick = () => {
-    navigate(-1);
+    navigate('/');
+  };
+
+  const fetchUserData = async (token: string) => {
+    try {
+      const response = await axios.get('http://localhost:8000/api/user/me/', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      dispatch(setUser(response.data));
+    } catch (err) {
+      console.error('Ошибка при получении данных пользователя:', err);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -32,13 +48,21 @@ const AuthModal: React.FC = () => {
 
       if (register.fulfilled.match(action)) {
         localStorage.setItem('accessToken', action.payload.token);
-        navigate('/');
+
+        dispatch(setToken(action.payload.token));
+
+        await fetchUserData(action.payload.token);
+        navigate('/account');
       }
     } else {
       const action = await dispatch(signIn({ email, password }));
 
       if (signIn.fulfilled.match(action)) {
-        localStorage.setItem('accessToken', action.payload.token);
+        localStorage.setItem('accessToken', action.payload.access);
+
+        dispatch(setToken(action.payload.access));
+
+        await fetchUserData(action.payload.access);
         navigate('/');
       }
     }
@@ -98,4 +122,4 @@ const AuthModal: React.FC = () => {
   );
 };
 
-export default AuthModal;
+export default ProfilePage;
