@@ -1,0 +1,41 @@
+.comment {
+  &__wrapper {
+    @include grid;
+    border-radius: 16px;
+    border: 1px solid #dfe2e6;
+    background: #fbfbfd;
+
+    padding: 32px;
+  }
+
+  &__top {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #dfe2e6;
+
+    grid-column: 5 / 13;
+  }
+
+  &__form {
+    border: 1px solid #dfe2e6;
+    background: #ffffff;
+    border-radius: 16px;
+
+    &-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 16px 24px;
+      border-top: 1px solid #dfe2e6;
+    }
+
+    &-textarea {
+      outline: none;
+      border: none;
+      width: 100%;
+      background: transparent;
+      height: calc(192px - 60px);
+      padding: 24px;
+    }
+  }
+}

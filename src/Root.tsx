@@ -16,6 +16,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 import DiscoverPage from './pages/DiscoverPage/DiscoverPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import AboutUsPage from './pages/AboutUsPage/AboutUsPage';
+import RestaurantPage from './pages/RestaurantPage/RestaurantPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ const Root: React.FC = () => {
             <Route path="home" element={<Navigate to="/" />} />
             <Route path="discover/:query" element={<DiscoverPage />} />
             <Route path="sign-in" element={<ProfilePage />} />
+            <Route path="/cafe/:cafeId" element={<RestaurantPage />} />
 
             <Route path="account" element={<Profile />} />
 

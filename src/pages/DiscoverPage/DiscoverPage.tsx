@@ -29,6 +29,10 @@ const DiscoverPage: React.FC = () => {
               className="discover__input"
               placeholder="Search"
             />
+
+            <span className="discover__search-rating">Rating</span>
+
+            <div className="discover__search-block"></div>
           </div>
 
           <div className="discover__sort">

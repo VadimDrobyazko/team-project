@@ -19,7 +19,7 @@ export const init = createAsyncThunk(
   'cafes/searchCafes',
   async (query: string) => {
     const data = await fetch(
-      `http://localhost:8000/api/main/restaurants/ukraine/${query}/`,
+      `http://localhost:8000/api/main/get-restaurants/${query}/`,
     );
 
     if (!data.ok) {

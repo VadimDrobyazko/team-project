@@ -1,6 +1,9 @@
 .discover {
   height: 100%;
 
+  padding: 61px 0 0;
+  background: #fbfbfd;
+
   &__wrapper {
     width: 100%;
     height: 100%;
@@ -8,11 +11,34 @@
   }
 
   &__title {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
+    font-size: 64px;
+    line-height: 83px;
+    font-weight: 700;
   }
 
   &__search {
     grid-column: 1 / 4;
+    grid-row: 3;
+
+    padding: 40px 32px;
+    height: 100%;
+    width: 100%;
+    max-height: 532px;
+
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #eaecef;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 16px;
+
+    border: none;
+    outline: none;
+    background: #dfe2e6;
+    border-radius: 12px;
   }
 
   &__sort {
@@ -20,6 +46,7 @@
     align-items: center;
 
     grid-column: 9 / 13;
+    grid-row: 2;
 
     &-list {
       display: flex;

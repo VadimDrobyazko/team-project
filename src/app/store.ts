@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import cafesSlice from '../features/cafes/cafes';
 import authSlice from '../features/auth/auth';
+import detailsSlice from '../features/details/details';
 
 export const store = configureStore({
   reducer: {
     cafes: cafesSlice,
     auth: authSlice,
+    details: detailsSlice,
   },
 });
 

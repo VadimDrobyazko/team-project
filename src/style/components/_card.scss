@@ -91,6 +91,7 @@
   &__title {
     font-size: 18px;
     line-height: 27px;
+    font-weight: 600;
   }
 
   &__adress {
@@ -118,5 +119,9 @@
   &__closed {
     color: #878e95;
     font-weight: 400;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 }
