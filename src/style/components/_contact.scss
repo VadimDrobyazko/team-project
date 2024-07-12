@@ -10,13 +10,17 @@
     flex-direction: column;
     gap: 40px;
 
-    width: 40%;
+    grid-column: 2 / 6;
 
     font-size: 24px;
     line-height: 31px;
     font-weight: 700;
 
     color: #000000;
+  }
+
+  &__right {
+    grid-column: 7 / 12;
   }
 
   &__block {
@@ -59,10 +63,6 @@
       font-weight: 400;
       line-height: 27px;
     }
-  }
-
-  &__right {
-    width: 50%;
   }
 
   &__subtitle {
