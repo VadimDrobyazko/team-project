@@ -4,6 +4,9 @@
   padding: 130px 56px;
   border-bottom: 1px solid #eaecef;
 
+  background-image: url(../../images/home.png);
+  background-size: cover;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -42,7 +45,7 @@
   }
 
   &__button {
-    background: #4a5057;
+    background-color: #3948ce;
     border-radius: 12px;
     height: 100%;
     width: 100%;
@@ -51,6 +54,11 @@
     outline: none;
 
     color: #ffffff;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(46, 58, 165);
+    }
   }
 
   &__svg {

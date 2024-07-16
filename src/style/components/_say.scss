@@ -1,0 +1,96 @@
+.say {
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 32px;
+    border: 1px solid #d9dee3;
+    border-radius: 16px;
+
+    width: 100%;
+    max-width: 432px;
+
+    &-rating {
+      display: flex;
+      gap: 4px;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+
+    &-img {
+      border-radius: 50%;
+    }
+
+    &-block {
+      display: flex;
+      align-items: center;
+
+      font-size: 14px;
+      line-height: 21px;
+
+      gap: 16px;
+
+      &-name {
+        color: #080808;
+      }
+
+      &-position {
+        color: #848a8f;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 42px;
+
+    color: #080808;
+  }
+
+  &__block {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 16px;
+    border-radius: 50%;
+
+    border: 1px solid #3948ce;
+
+    outline: none;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: row;
+
+    overflow: hidden;
+    gap: 16px;
+  }
+}

@@ -16,6 +16,7 @@ const RestaurantPage: React.FC = () => {
   );
   const loaded = useSelector((state: RootState) => state.details.loaded);
   const hasError = useSelector((state: RootState) => state.details.hasError);
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {

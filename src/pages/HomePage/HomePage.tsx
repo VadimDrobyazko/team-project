@@ -6,6 +6,9 @@ import { RootState } from '../../app/store';
 import SliderCafe from '../../components/SliderCafe/SliderCafe';
 import { useNavigate } from 'react-router-dom';
 
+import images from '../../images/about.png';
+import SayCard from '../../components/SayCard/SayCard';
+
 const HomePage: React.FC = () => {
   const [query, setQuery] = useState('');
 
@@ -77,6 +80,102 @@ const HomePage: React.FC = () => {
       </section>
 
       <SliderCafe />
+
+      <section className="section company">
+        <div className="container">
+          <div className="company__wrapper">
+            <img src={images} className="company__img" alt="Company" />
+
+            <div className="company__text">
+              <h1 className="company__title">About the company</h1>
+
+              <h4 className="company__subtitle">
+                FoodieGuider simplifies discovering the best cafes and
+                restaurants with personalized recommendations and comprehensive
+                reviews.
+              </h4>
+
+              <div className="company__button">More information</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section say">
+        <div className="container">
+          <div className="say__wrapper">
+            <div className="say__top">
+              <h2 className="say__title">What do people say about us?</h2>
+
+              <div className="say__block">
+                <div className="say__button say__button-left">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.828 6.77815H16V8.77815H3.828L9.192 14.1422L7.778 15.5562L0 7.77815L7.778 0.000152588L9.192 1.41415L3.828 6.77815Z"
+                      fill="#121212"
+                    />
+                  </svg>
+                </div>
+
+                <div className="say__button say__button-right">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12.172 6.77815H0V8.77815H12.172L6.808 14.1422L8.222 15.5562L16 7.77815L8.222 0.000152588L6.808 1.41415L12.172 6.77815Z"
+                      fill="#121212"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div className="say__middle">
+              <SayCard />
+
+              <SayCard />
+
+              <SayCard />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section faq">
+        <div className="container">
+          <div className="faq__wrapper">
+            <h2 className="faq__title">faq</h2>
+
+            <ul className="faq__list">
+              <li className="faq__item">What is FoodieGuider?</li>
+              <li className="faq__item">How do I search for cafes?</li>
+              <li className="faq__item">Is FoodieGuider free to use?</li>
+              <li className="faq__item">How do I leave a review?</li>
+              <li className="faq__item">
+                Can I save my favorite food establishment?
+              </li>
+              <li className="faq__item">
+                How does FoodieGuider recommend cafes?
+              </li>
+              <li className="faq__item">How do I delete my account?</li>
+              <li className="faq__item">
+                Is my personal information safe with FoodieGuider?
+              </li>
+              <li className="faq__item">Can I share cafes with my friends?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

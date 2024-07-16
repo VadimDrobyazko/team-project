@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo/Logo';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Footer: React.FC = () => {
         <div className="footer__wrapper">
           <div className="footer__top">
             <ul className="footer__left">
-              <h2 className="footer__logo">FoodieGuider</h2>
+              <Logo />
 
               <span className="footer__subtitle">
                 Your Destination for Culinary Inspiration

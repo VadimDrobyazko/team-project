@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
 
-    gap: 10px;
+    gap: 16px;
   }
 
   &__link {
@@ -14,9 +14,12 @@
     font-weight: 400;
 
     color: #000;
+
+    padding: 12px;
+    border-radius: 100px;
   }
 }
 
 .active {
-  color: aquamarine;
+  background-color: #eaecef;
 }

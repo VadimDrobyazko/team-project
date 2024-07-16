@@ -1,19 +1,29 @@
 @font-face {
   font-family: 'Mont';
-  src: url('../../fonts/Poppins-Medium.woff2');
-}
-
-@font-face {
-  font-family: 'Mont';
   src: url('../../fonts/Poppins-Regular.woff2');
+  font-weight: 400;
 }
 
 @font-face {
   font-family: 'Mont';
-  src: url('../../fonts/Poppins-Bold.woff2');
+  src: url('../../fonts/Poppins-Medium.woff2');
+  font-weight: 500;
 }
 
 @font-face {
   font-family: 'Mont';
   src: url('../../fonts/Poppins-SemiBold.woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mont';
+  src: url('../../fonts/Poppins-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../../fonts/Pacifico-Regular.woff2');
+  font-weight: 400;
 }

@@ -11,6 +11,22 @@
     justify-content: space-between;
   }
 
+  &__logo {
+    font-family: 'Pacifico', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 56px;
+
+    text-decoration: none;
+    color: #080808;
+
+    transition: 0.3s all ease-in;
+
+    &:hover {
+      color: #3948ce;
+    }
+  }
+
   &__login {
     text-align: center;
 
@@ -25,8 +41,13 @@
     text-decoration: none;
     font-weight: 500;
 
-    background: #aeb5bc;
-    color: #000;
+    background-color: #121212;
+    color: #fff;
+    transition: 0.3s all ease-in;
+
+    &:hover {
+      background-color: #3948ce;
+    }
   }
 
   &__modal {

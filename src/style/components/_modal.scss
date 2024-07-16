@@ -1,17 +1,10 @@
 .modal {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
   padding: 30px 20px;
 
-  min-width: 50%;
-  min-height: 80%;
+  width: 100%;
+  min-height: 70vh;
 
-  transform: translate(-50%, -50%);
-
-  background: gray;
+  background: transparent;
 
   &__wrapper {
     display: flex;
@@ -21,12 +14,6 @@
     justify-content: center;
 
     gap: 20px;
-  }
-
-  &__button {
-    position: absolute;
-    left: 20px;
-    top: 20px;
   }
 
   &__label {

@@ -13,7 +13,9 @@ const Header: React.FC = () => {
     <header className="header">
       <div className="header__top">
         <Logo />
+
         <Nav />
+
         <div className="header__modal">
           <div className="header__lang">
             <svg
