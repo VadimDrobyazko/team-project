@@ -37,7 +37,7 @@ const Root: React.FC = () => {
           <Route path="/" element={<App />}>
             <Route index element={<HomePage />} />
             <Route path="home" element={<Navigate to="/" />} />
-            <Route path="discover/:query" element={<DiscoverPage />} />
+            <Route path="discover/:query?" element={<DiscoverPage />} />
             <Route path="sign-in" element={<ProfilePage />} />
             <Route path="/cafe/:cafeId" element={<RestaurantPage />} />
 

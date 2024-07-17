@@ -1,5 +1,6 @@
 .search {
   width: 100%;
+  min-height: 709px;
 
   padding: 130px 56px;
   border-bottom: 1px solid #eaecef;
@@ -33,7 +34,7 @@
   &__title {
     font-size: 64px;
     line-height: 83px;
-    color: #000;
+    color: #fff;
   }
 
   &__input {

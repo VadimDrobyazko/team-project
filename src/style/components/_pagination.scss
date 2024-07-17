@@ -1,0 +1,40 @@
+.pagination {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  grid-column: 4 / 13;
+
+  padding-top: 26px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    border: 1px solid #b1b2b2;
+
+    outline: none;
+
+    color: #121212;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    &--active {
+      background-color: #3948ce;
+      color: #fff;
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+}

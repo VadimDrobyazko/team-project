@@ -1,32 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Cafe } from '../../types/Cafe';
+import React, { useEffect } from 'react';
 import Card from '../Card/Card';
+import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../app/hooks';
+import { RootState } from '../../app/store';
+import * as cafesTopActions from '../../features/cafes/cafes';
 
 const SliderCafe: React.FC = () => {
-  const [cafes, setCafes] = useState<Cafe[]>([]);
-  const [hasError, setHasError] = useState(false);
+  const dispatch = useAppDispatch();
 
-  const fetchTop = async () => {
-    try {
-      const response = await fetch(
-        'http://localhost:8000/api/main/get-top-restaurants/',
-      );
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-
-      setCafes(data);
-    } catch (error) {
-      setHasError(true);
-    }
-  };
+  const { cafes, hasError } = useAppSelector((state: RootState) => state.cafes);
 
   useEffect(() => {
-    fetchTop();
-  }, []);
+    dispatch(cafesTopActions.fetchTopCafes());
+  }, [dispatch]);
 
   return (
     <section className="slider">
@@ -34,7 +20,9 @@ const SliderCafe: React.FC = () => {
         <div className="slider__top">
           <h2 className="slider__title">Popular places</h2>
 
-          <span className="slider__view">View all</span>
+          <Link to="/discover" className="slider__view">
+            View all
+          </Link>
         </div>
 
         {hasError ? (

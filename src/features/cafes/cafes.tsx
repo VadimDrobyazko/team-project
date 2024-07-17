@@ -34,6 +34,23 @@ export const init = createAsyncThunk(
   },
 );
 
+export const fetchTopCafes = createAsyncThunk(
+  'cafes/fetchTopCafes',
+  async () => {
+    const data = await fetch(
+      `http://localhost:8000/api/main/get-top-restaurants/`,
+    );
+
+    if (!data.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const response = await data.json();
+
+    return response;
+  },
+);
+
 const cafesSlice = createSlice({
   name: 'cafes',
   initialState,
@@ -50,6 +67,21 @@ const cafesSlice = createSlice({
     });
 
     builder.addCase(init.rejected, state => {
+      state.loaded = true;
+      state.hasError = true;
+    });
+
+    builder.addCase(fetchTopCafes.pending, state => {
+      state.loaded = false;
+      state.hasError = false;
+    });
+
+    builder.addCase(fetchTopCafes.fulfilled, (state, action) => {
+      state.cafes = action.payload;
+      state.loaded = true;
+    });
+
+    builder.addCase(fetchTopCafes.rejected, state => {
       state.loaded = true;
       state.hasError = true;
     });

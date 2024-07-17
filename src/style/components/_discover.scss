@@ -1,12 +1,13 @@
 .discover {
   height: 100%;
 
-  padding: 61px 0 0;
+  padding: 61px 0 160px;
   background: #fbfbfd;
 
   &__wrapper {
     width: 100%;
     height: 100%;
+
     @include grid;
   }
 
@@ -44,6 +45,9 @@
   &__sort {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+
+    gap: 16px;
 
     grid-column: 9 / 13;
     grid-row: 2;
@@ -51,6 +55,10 @@
     &-list {
       display: flex;
       align-items: center;
+
+      grid-column: 4 / 13;
+
+      min-height: 100%;
     }
   }
 
