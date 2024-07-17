@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.61b421d4.css",
-    "main.js": "./static/js/main.e73e840a.js",
+    "main.css": "./static/css/main.04bf573f.css",
+    "main.js": "./static/js/main.3db9de0a.js",
     "static/media/home.png": "./static/media/home.e489d389c6c7dc230342.png",
     "static/media/about.png": "./static/media/about.70c134e9cdfe386af582.png",
     "static/media/Pacifico-Regular.woff2": "./static/media/Pacifico-Regular.f8561aeaeeedce9accb3.woff2",
@@ -10,11 +10,11 @@
     "static/media/Poppins-Bold.woff2": "./static/media/Poppins-Bold.b138d0279be06a607215.woff2",
     "static/media/Poppins-SemiBold.woff2": "./static/media/Poppins-SemiBold.810728e0001e1f7c0a71.woff2",
     "index.html": "./index.html",
-    "main.61b421d4.css.map": "./static/css/main.61b421d4.css.map",
-    "main.e73e840a.js.map": "./static/js/main.e73e840a.js.map"
+    "main.04bf573f.css.map": "./static/css/main.04bf573f.css.map",
+    "main.3db9de0a.js.map": "./static/js/main.3db9de0a.js.map"
   },
   "entrypoints": [
-    "static/css/main.61b421d4.css",
-    "static/js/main.e73e840a.js"
+    "static/css/main.04bf573f.css",
+    "static/js/main.3db9de0a.js"
   ]
 }
